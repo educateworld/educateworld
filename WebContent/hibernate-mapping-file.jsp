@@ -7,6 +7,7 @@
 </div>	
 <h2>POJO class:
 </h2>
+
 <p><div style="font-family: courier;">
 <p><b>Question.java file </b>
 <p>package com.demo.hbm;
