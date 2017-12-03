@@ -514,69 +514,7 @@ document.onclick=reEnable
 										href="http://www.educateworld.org/java-interview-qa.jsp">Questions&Answers</a>
 										</li></ul></li>
 								</ul></li>
-						<!-- 	<li id="menu-item-21"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a
-								href="net.jsp">.Net</a></li>
-							<li id="menu-item-20"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a
-								href="data-science.jsp">Data Science</a></li>
-							<li id="menu-item-19"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a
-								href="data-base.jsp">Data Base</a>
-								<ul>
-										<li id="menu-item-151"
-										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"><a
-										href="http://www.educateworld.org/sql.jsp">SQL </a>
-										
-										<ul><li id="menu-item-151"
-										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"><a
-										href="http://www.educateworld.org/sql.jsp">Concepts </a>
-										</li>
-										<li id="menu-item-151"
-										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"><a
-										href="http://www.educateworld.org/sql.jsp">Questions</a>
-										</li></ul></li>
-										<li id="menu-item-151"
-										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"><a
-										href="http://www.educateworld.org/oracle.jsp">Oracle </a>
-										<ul><li id="menu-item-151"
-										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"><a
-										href="http://www.educateworld.org/oracle.jsp">Concepts </a>
-										</li>
-										<li id="menu-item-151"
-										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"><a
-										href="http://www.educateworld.org/oracle.jsp">Questions</a>
-										</li></ul></li></ul></li>
-										<li id="menu-item-19"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a
-								href="cloud-computing.jsp">Cloud</a></li>
-							<li id="menu-item-19"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a
-								href="angularjs.jsp">Angular Js</a></li>
-								<li id="menu-item-19"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a
-								href="agile-methodology.jsp">Agile</a></li>
-								<li id="menu-item-19"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a
-								href="#">Web Services</a>
-								<ul><li id="menu-item-151"
-										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"><a
-										href="http://www.educateworld.org/soap.jsp">SOAP </a>
-										</li>
-										<li id="menu-item-151"
-										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"><a
-										href="http://www.educateworld.org/restful.jsp">RESTful</a>
-										</li></ul></li>
-								<li id="menu-item-19"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a
-								href="businessobjects.jsp">Business Objects</a></li>
-								<li id="menu-item-19"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a
-								href="other_concepts.jsp">Other InterView Questions</a></li>
-							<li id="menu-item-19"
-								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a
-								href="online.jsp">Online Training</a></li> 
-						</ul>-->
+						
 					</div>
 				</div>
 				<!-- .menu-content -->
