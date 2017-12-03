@@ -9,7 +9,6 @@
 </h2>
 <p><div style="font-family: courier;">
 <p><b>Question.java file </b>
-
 <p>package com.demo.hbm;
 <p>import java.util.List;
 <p>public class Question {
