@@ -1,9 +1,9 @@
  <%@include file="java-header.jsp"%>
 <%@include file="hibernate-leftbar.jsp" %>
 <article>
-<p>POJO class:
-
-<p>Question.java file 
+<h2>POJO class:
+</h2>
+<p><b>Question.java file </b>
 
 <p>package com.demo.hbm;
 <p>import java.util.List;
