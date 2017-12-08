@@ -1,364 +1,10 @@
 <%@include file="java-header.jsp"%>
-<%@include file="corejavaleftbar.jsp"%>
+<%@include file="java-interview-leftbar.jsp"%>
 					<article>
 						<p>	<h1 class="entry-title">Core Java Interview Questions</h1>
-							<p><b>1. What is nested class?</b></p>
-	<p>A class within another class is called nested class.
-
-</p><p><b>2. Is there any difference between nested classes and inner classes?</b>
-<p>	A non-static class within another class is called Inner class. A static class within another class is called Nested class 
-
-</p><p><b>3. Can we access the non-final local variable, inside the local inner class?</b>
-<p>	No, local variable must be constant if we want to access it in local inner class. The local variable exist on the stack  only for the lifetime of the method.
-<p>Because the local variables are not guaranteed to exist as long as the method local ineer class object, the inner class object can't use them. Only final local variable can be used.
-
-</p><p><b>4. What is nested interface ?</b>
-	<p>An interface i.e. declared within another interface or class is known as nested interface. The nested interfaces are used to group related interfaces so that they can be easy to maintain.
-
-</p><p><b>5. Can a class have an interface?</b>
-<p>	Yes,we can write default implementation for interface methods.
-
-</p><p><b>6. Can an Interface have a class?</b>
-	<p>Yes, you can create both a nested class or an inner class inside a Java interface
-
-</p><p><b>7. What is multithreading?</b>
-<p>	Multithreading in java is a process of executing multiple threads simultaneously.
-	
-</p><p><b>8. What is thread?</b>
-	<p>It's an independent path of execution through program code. When multiple threads execute, one thread's path through the same code usually differs from the others.
-
-</p><p><b>9. What is the difference between preemptive scheduling and time slicing?</b>
-<p>Preemptive scheduling: The highest priority task executes until it enters the waiting or dead states or a higher priority task comes into existence.
-<p>Time slicing: A task executes for a predefined slice of time and then reenters the pool of ready tasks. The scheduler then determines which task should execute
-next, based on priority and other factors.
-
-</p><p><b>10. What does join() method?</b>
-	<p>join( ) method wait for a thread to finish .This method waits until the thread on which it is called terminates. Its name comes from the concept of the calling thread waiting until the specified thread joins it.
-
-</p><p><b>11. What is difference between wait() and sleep() method?</b>
-<p>	Wait() is an instance method that is used for thread synchronization. It can be called on any object, as it’s defined right on java.lang.Object, but it can only be called from a synchronized block
-Thread.sleep() is a static method that can be called from any context. Thread.sleep() pauses the current thread and does not release any locks.
-
-</p><p><b>12. Is it possible to start a thread twice?</b>
-	<p>No. After starting a thread, it can never be started again. If you does so, an IllegalThreadStateException is thrown. In such case, thread will run once but for second time, it will throw exception.	
-
-<p><b>13. Can we call the run() method instead of start()?</b>
-	<p>If you directly call run() method its body is executed in context of current thread. When you invoke start() method a new thread is created and run() method is executed in this new thread.	
-
-<p><b>14. What about the daemon threads?</b>
-	<p>Daemon thread in java is a service provider thread that provides services to the user thread. Its life depend on the mercy of user threads i.e. when all the user threads dies, JVM terminates this thread automatically.
-
-<p><b>15. Can we make the user thread as daemon thread if thread is started?</b>
-	<p>you can make a user thread to Daemon by using setDaemon() method of thread class. Your program will run on this thread, unless you create additional threads yourself.
-
-<p><b>16. What is shutdown hook?</b>
-	<p>The shutdown hook can be used to perform cleanup resource or save the state when JVM shuts down normally or abruptly. Performing clean resource means closing log file, sending some alerts or something else. So if you want to execute some code before JVM shuts down, use shutdown hook.
-
-<p><b>17. When should we interrupt a thread?</b>
-	<p>If any thread is in sleeping or waiting state (i.e. sleep() or wait() is invoked), calling the interrupt() method on the thread, breaks out the sleeping or waiting state throwing InterruptedException. If the thread is not in the sleeping or waiting state, calling the interrupt() method performs normal behaviour and doesn't interrupt the thread but sets the interrupt flag to true. Let's first see the methods provided by the Thread class for thread interruption.
-
-
-<p><b>18. What is synchronization?</b>
-	<p>Synchronization in java is the capability to control the access of multiple threads to any shared resource. Java Synchronization is better option where we want to allow only one thread to access the shared resource.
-
-<p><b>19. What is the purpose of Synchronized block?</b>
-	<p>Synchronized block can be used to perform synchronization on any specific resource of the method. Suppose you have 50 lines of code in your method, but you want to synchronize only 5 lines, you can use synchronized block. If you put all the codes of the method in the synchronized block, it will work same as the synchronized method.
-
-<p><b>20. Can Java object be locked down for exclusive use by a given thread?</b>
-<p>	Yes, it is locked
-
-<p><b>21. What is static synchronization?</b>
-<p>	If you make any static method as synchronized, the lock will be on the class not on object.
-
-<p><b>22. What is the difference between notify() and notifyAll()?</b>
-	
-
-<p><b>23. What is deadlock?</b>
-<p>	Deadlock describes a situation where two or more threads are blocked forever, waiting for each other. ... A Java multithreaded program may suffer from the deadlock condition because the synchronized keyword causes the executing thread to block while waiting for the lock, or monitor, associated with the specified object.
-
-
-<p><b>24. What is Garbage Collection?</b>
-<p>	In java, garbage means unreferenced objects. Garbage Collection is process of reclaiming the runtime unused memory automatically. In other words, it is a way to destroy the unused object
-
-<p><b>25. What is gc()?</b>
-	<p>The gc() method is used to invoke the garbage collector to perform cleanup processing. The gc() is found in System and Runtime classes.
-	
-
-<p><b>26. What is the purpose of finalize() method?</b>
-	<p>The Object class provides a callback method, finalize(), that may be invoked on an object when it becomes garbage.
-
-<p><b>27. Can an unrefrenced objects be refrenced again?</b>
-	<p>Yes it is possible we can get the reference of unreferenced objects by this keyword in finalize method. 
-
-<p><b>28. What kind of thread is the Garbage collector thread?</b>
-<p>	It is a Daemon Thread.	
-
-<p><b>29. What is difference between final, finally and finalize?</b>
-<p>	Final is used to apply restrictions on class, method and variable. Final class can't be inherited, final method can't be overridden and final variable value can't be changed.
-<p> Finally is used to place important code, it will be executed whether exception is handled or not. 
-<p>Finalize is used to perform clean up processing just before object is garbage collected.
-<p>Final is a keyword. Finally is a block. Finalize is a method.
-
-<p><b>30. What is the purpose of the Runtime class?</b>
-	<p>The purpose of the Runtime class is to provide access to the Java runtime system. The runtime information like memory availability, invoking the garbage collector, etc.
-
-<p><b>31. How will you invoke any external process in Java?</b>
-	<p>We can invoke the external process in Java using exec() method of Runtime Class 
-</p>
-<p><b>32.What is a deadlock?</b>
-<p><b>33. What is method overloading?</b>  <p>
-	Method overloading is nothing but the static binding. It have the same class name same method name but different parameters.
-
-<p><b>34. Why method overloading is not possible by changing the return type in java?</b>  <p>
-	In java, method overloading is not possible by changing the return type of the method because there may occur ambiguity.
-There should be same return type.
-
-<p><b>35. Can we overload main() method?</b>  <p>
-	Yes, by not using static we can overload main method. You can have any number of main methods in a class by method overloading. But JVM calls main() method which receives string array as arguments only.
-
-<p><b>36. What is &lsquo;this&rsquo; in java?</b>  <p>
-	this can be used to refer current class instance variable. this can be used to invoke current class method (implicitly). this() can be used to invoke current class constructor. this can be passed as an argument in the method call. this can be passed as argument in the constructor call. this can be used to return the current class instance from the method
-	
-<p><b>37. What is Inheritance?</b>  <p>
-	The process by which one class acquires the properties(data members) and functionalities(methods) of another class is called inheritance. The aim of inheritance is to provide the reusability of code so that a class has to write only the unique features and rest of the common properties and functionalities can be extended from the another class.
-	
-
-<p><b>38. Which class is the super class for every class?</b>  <p>
-	java.lang.Object class is the super class for all java classes
-	
-<p><b>39. Why multiple inheritance is not supported in java?</b>  <p>
-	 The problem with multiple inheritance is that two classes may define different ways of doing the same thing, and the subclass can't choose which one to pick. And arises ambiguty problem. Interfaces help in doing that. Because Interfaces specify only what the class is doing, not how it is doing it.
-
-<p><b>40. What is composition?</b>  <p>
-	Composition in java is the design technique to implement has-a relationship in classes. We can use java inheritance or Object composition in java for code reuse.
-
-09
-<p><b>41. Why Java does not support pointers?</b>  <p>
-	In order to make it more secure,it doesn't allow pointers directly(Manually). Pointers works internally in java.	
-
-<p><b>42. What is super in java?</b>  <p>
-	super can be used to refer immediate parent class instance variable. super can be used to invoke immediate parent class method. super() can be used to invoke immediate parent class constructor.	
-
-<p><b>43.Can you use this() and super() both in a constructor?</b>  <p>
-	Both this() and super() are constructor calls. Constructor call must always be the first statement. So we can not have two statements as first statement, hence either we can call super() or we can call this() from the constructor, but not both.
-
-<p><b>44. What is object cloning?</b>  <p>
-	The object cloning is a way to create exact copy of an object. For this purpose, clone() method of Object class is used to clone an object.
-	
-<p><b>45. What is method overriding?</b>  <p>
-	If subclass (child class) has the same method as declared in the parent class, it is known as method overriding in java. 
-	In other words, If subclass provides the specific implementation of the method that has been provided by one of its parent class, it is known as method overriding.
-
-<p><b>46. Can we override static method?</b>  <p>
-	No,Static methods can not be overridden because there is nothing to override, as they would be two different methods.
-
-<p><b>47. Why we cannot override static method?</b>  <p>
-	Static methods can not be overridden because there is nothing to override, as they would be two different methods.
-
-<p><b>48. Can we override the overloaded method?</b>  <p>
-	Its possible to overload main in Java but its not possible to override it, simply because its a static method. Execution of Java program has no impact on overloading main because JVM always call the original main method and if it doesn't found in class then it throws java.lang.NoSuchMethodError: main Exception in thread "main" error at runtime.
-
-
-<p><b>49. Difference between method Overloading and Overriding?</b>  <p>
-	Overloading happens at compile-time while Overriding happens at runtime. The binding of overloaded method call to its definition has happens at compile-time however binding of overridden method call to its definition happens at runtime.
-	The most basic difference is that overloading is being done in the same class while for overriding base and child classes are required. Overriding is all about giving a specific implementation to the inherited method of parent class.
-
-<p><b>50. Can you have virtual functions in Java?</b>  <p>
-	In Java, all non-static methods are by default "virtual functions." Only methods marked with the keyword final, which cannot be overridden, along with private methods, which are not inherited, are non-virtual
-
-<p><b>51. What is covariant return type?</b>  <p>
-	Covariant return, means that when one overrides a method, the return type of the overriding method is allowed to be a subtype of the overridden method's return type.
-<b>Example</b>
-<p>public class Animal {
-
-  <p>  protected Food seekFood() {
-
-    <p>    return new Food();
-  <p>  }
-<p>}
-</p>
-<p><b>52. What is final variable?</b>  <p>
-	Final is a constant keyword, which we can use with variables, methods and classes.
-	The final keyword can be applied with the variables, a final variable that have no value it is called blank final variable or uninitialized final variable. It can be initialized in the constructor only. The blank final variable can be static also which will be initialized in the static block only.
-
-<p><b>53. What is final method?</b>  <p>
-	If you make any method as final, you cannot override it.
-
-<p><b>54. What is final class?</b>  <p>
-	If you make any class as final, you cannot extend it.
-
-<p><b>55. Can you declare the main method as final?</b>  <p> 
-	Yes, main can be declared as final. Final means the method or variable cannot be modified in sub-class. It does not have any impact on main because Static function is not a part of object instance.
-
-<p><b>56. What is Polymorphism?</b>  <p>
-	Polymorphism in java is a concept by which we can perform a single action by different ways. Polymorphism is derived from 2 greek words: poly and morphs. The word "poly" means many and "morphs" means forms. So polymorphism means many forms.
-	There are two types of polymorphism in java: compile time polymorphism and runtime polymorphism. We can perform polymorphism in java by method overloading and method overriding.
-
-<p><b>57. How Polymorphism is achieved?</b>  <p>
-	compile time polymorphism and runtime polymorphism. We can perform polymorphism in java by method overloading and method overriding.
-
-<p><b>58. What is Runtime Polymorphism?</b>  <p>
-	Runtime polymorphism or Dynamic Method Dispatch is a process in which a call to an overridden method is resolved at runtime rather than compile-time.
-	In this process, an overridden method is called through the reference variable of a superclass. The determination of the method to be called is based on the object being referred to by the reference variable.
-
-<p><b>59. Can you achieve Runtime Polymorphism by data members?</b>  <p>
-	 Yes. When you declare data member on parent class then you don’t need to redefine it on child class data member’s value will get resolved to overridden value in actual object type just use or change its value based on your requirement.
-
-<p><b>60. What is static binding?</b>  <p>
-	Static binding is nothing but method overloading or function overloading. It have the same class name same method name but different parameters.
-
-<p><b>61. What is dynamic binding?</b>  <p>
-	Dynamic binding is nothing but mathod over riding or functional overridding. It have the same method name same parameters but different class names.
-
-<p><b>62. What is the difference between static binding and dynamic binding?</b>  <p>
-	When type of the object is determined at compiled time(by the compiler), it is known as static binding
-	When type of the object is determined at run-time, it is known as dynamic binding.
-
-<p><b>64. What is Abstraction?</b>  <p>
-	Abstraction is the process of abstraction in Java is used to hide certain details and only show the essential features of the object. In other words, it deals with the outside view of an object (interface). 
-
-<p><b>65. What is the difference between abstraction and encapsulation?</b>  <p>
-	Abstraction is implemented in Java using interface and abstract class while Encapsulation is implemented using private, package-private and protected access modifier. Design principles "programming for interface than implementation" is based on abstraction and "encapsulate whatever changes" is based upon Encapsulation.
-
-
-<p><b>66. What is abstract class?</b>  <p>
-	A class that is declared as abstract is known as abstract class. It needs to be extended and its method implemented. It cannot be instantiated.
-	
-<p><b>67. Can there be any abstract method without abstract class?</b>  <p>
-	No we can not use abstract methods with out abstract class.If u define one method as absract automatically the class having that method become abstract.
-
-<p><b>68. Can you use abstract and final both with a method?</b>  <p>
-	No, Abstract method cannot be declared as final. This is because, abstract method has to be overridden to provide implementation. If it is declared as final, it cannot be overridden.
-
-<p><b>69. Is it possible to instantiate the abstract class?</b>  <p>
-	No, Because an abstract class is an incomplete class (incomplete in the sense it contains abstract methods without body and output) we cannot create an instance or object.
-
-<p><b>70.What is interface?</b>  <p>
-	An interface in java is a blueprint of a class. It has static constants and abstract methods.
-The interface in java is a mechanism to achieve abstraction. There can be only abstract methods in the java interface not method body. It is used to achieve abstraction and multiple inheritance in Java.
-Java Interface also represents IS-A relationship.
-	
-<p><b>71. Can you declare an interface method static?</b>  <p>
-<p>Yes, In Java 8, interfaces can contain implemented methods, static methods, and the so-called "default" methods.</p>
-
-<p><b>72. Can an Interface be final?</b>  <p>
-	No. We can not instantiate interfaces, so in order to make interfaces useful we must create subclasses. The final keyword makes a class unable
-to be extended.
-
-<p><b>73. What is marker interface?</b>  <p>
-	Marker interface in Java is interfaces with no field or methods or in simple word empty interface in java is called marker interface. 
-
-<p><b>74. What is difference between abstract class and interface?</b>  <p> 
-	Abstract class can have constructor, where you need an object to call the methods in subclass. But in case of default method without any reference you can invoke the interface method, like InterfaceName.super.method()
-
-
-<p><b>75. Can we define private and protected modifiers for variables in interfaces?</b>  <p>
-	When you Declare interface The java compiler adds public and abstract keywords before the interface method and public, static and final keywords before data members automatically 
-public interface Test{
-   public string name1;
-   private String email;
-   protected pass;
-}
-as you have declare variable in test interface with private and protected it will give error. if you do not specify the modifier the compiler will add public static final automatically.
-
-</p>
-<p><b>76. When can an object reference be cast to an interface reference?</b>  
-<p>
-	An object reference be cast to an interface reference when the object implements thereferenced interface.
-
-</p><p><b>77. What is package?</b>  <p>
-	A package is a grouping of related types providing access protection and name space management.
-
-</p>
-<p><b>78. Do I need to import java.lang package any time? Why ?</b>  <p>
-	No because the Java compiler automatically imports the "java.lang.*" package 
-
-</p><p><b>79. Can I import same package/class twice? Will the JVM load the package twice at runtime?</b>  <p>
-	One can import the same package or same class multiple times. Neither compiler nor JVM complains abt it. And the JVM will internally load the class only once no matter how many times you import the same class.
-
-</p><p><b>80. What is static import ?</b>  <p>
-	The static import feature of Java 5 facilitate the java programmer to access any static member of a class directly. There is no need to qualify it by the class name.
-
-</p><p><b>81. How to create a package?</b>  <p>
-	To create a package, you choose a name for the package (naming conventions are discussed in the next section) and put a package statement with that name at the top of every source file that contains the types (classes, interfaces, enumerations, and annotation types) that you want to include in the package.
-	The package statement (for example, package graphics;) must be the first line in the source file. There can be only one package statement in each source file, and it applies to all types in the file.
-
-</p><p><b>82. What is Exception Handling?</b>  <p>
-	Exception Handling is a mechanism to handle runtime errors such as ClassNotFound, IO, SQL, Remote etc.
-
-</p><p><b>83. What is difference between Checked Exception and Unchecked Exception?</b>  <p>
-	The exceptions that are checked at compile time. If some code within a method throws a checked exception, then the method must either handle the exception or it must specify the exception using throws keyword.
-	The exceptions that are not checked at compiled time. In C++, all exceptions are unchecked, so it is not forced by the compiler to either handle or specify the exception. It is up to the programmers to be civilized, and specify or catch the exceptions.
-
-</p><p><b>84. What is the base class for Error and Exception?</b>  <p>
-	Throwable is the base class for the classes Error and Exception.
-
-</p><p><b>85. Is it necessary that each try block must be followed by a catch block?</b>  <p>
-	It is not necessary that each try block must be followed by a catch block. It should be followed by either a catch block OR a finally block. And whatever exceptions are likely to be thrown should be declared in the throws clause of the method
-
-</p><p><b>86. What is finally block?</b>  <p>
-	Java finally block is a block that is used to execute important code such as closing connection, stream etc. Java finally block is always executed whether exception is handled or not. Java finally block follows try or catch block.
-
-</p><p><b>87. Can finally block be used without catch?</b>  <p>
-	YES, It possible to have try without catch or finally.
-
-</p><p><b>88. Is there any case when finally will not be executed?</b>  <p>
-	If the thread executing the try or catch code is interrupted or killed, the finally block may not execute even though the application as a whole continues.
-
-</p><p><b>89. What is difference between throw and throws?</b>  <p>
-	Java throw keyword is used to explicitly throw an exception. Java throws keyword is used to declare an exception. Checked exception cannot be propagated using throw only. Checked exception can be propagated with throws.
-
-</p><p><b>90. Can an exception be re thrown?</b>  <p>
-	exceptions occurred in the try block are caught in catch block. Thus caught exceptions can be re-thrown using throw keyword. Re-thrown exception must be handled some where in the program, otherwise program will terminate abruptly.	
-
-</p><p><b>91. Can subclass overriding method declare an exception if parent class method doesn't throw an exception ?</b>  <p>
-	Yes but only unchecked exception not checked.	
-
-</p><p><b>92. What is exception propagation?</b>  <p>
-	An exception is first thrown from the top of the stack and if it is not caught, it drops down the call stack to the previous method,If not caught there, the exception again drops down to the previous method, and so on until they are caught or until they reach the very bottom of the call stack.This is called exception propagation.
-
-</p><p><b>93. What is the meaning of immutable in terms of String?</b>  <p>
-	In java, string objects are immutable. Immutable simply means unmodifiable or unchangeable. Once string object is created its data or state can't be changed but a new string object is created.
-	
-</p><p><b>94. Why string objects are immutable in java?</b>  <p>
-	There are multiple reasons that String is designed to be immutable in Java. A good answer depends on good understanding of memory, synchronization, data structures, etc.
-
-</p><p><b>95. How many ways we can create the string object?</b>  <p>
-	There are two ways to create String object:
-
-		1)By string literal
-		String s="welcome"; 
-
-		2)By new keyword
-		String s=new String("Welcome")
-	
-
-</p><p><b>96. How many objects will be created in the following code?</b>  <p>
-String s1="Welcome";  
-String s2="Welcome";  
-String s3="Welcome";  
-	Only one String object is created which is referred by three references 
-
-</p><p><b>97. Why java uses the concept of string literal?</b>  <p>
-	Each time you create a string literal, the JVM checks the string constant pool first. If the string already exists in the pool, a reference to the pooled instance is returned. If string doesn't exist in the pool, a new string instance is created and placed in the pool.
-
-</p><p><b>98. How many objects will be created in the following code?</b> 
-<p>String s = new String("Welcome");  	
-	<p>Two objects, one in string constant pool and other in non-pool(heap)
-	
-</p><p><b>99. What is the basic difference between String and StringBuffer object?</b>
-	<p>String class is immutable. String is slow and consumes more memory when you concat too many strings because every time it creates new instance. String class overrides the equals() method of Object class. So you can compare the contents of two strings by equals() method.
-	<p>StringBuffer class is mutable. StringBuffer is fast and consumes less memory when you cancat strings. StringBuffer class doesn't override the equals() method of Object class.
-	
-</p><p><b>100. What is the difference between StringBuffer and StringBuilder?</b>
-	<p>StringBuffer is synchronized i.e. thread safe. It means two threads can't call the methods of StringBuffer simultaneously. StringBuilder is non-synchronized i.e. not thread safe. It means two threads can call the methods of StringBuilder simultaneously. StringBuffer is less efficient than StringBuilder. StringBuilder is more efficient than StringBuffer.
-
-
-</p><p><b>101. What is the purpose of toString() method in java ?</b>
-	<p>By overriding the toString() method of the Object class, we can return values of the object, so we don't need to write much code.
-	
-	
-	
+						
+						
+						
 	<p>
 										<strong>What is procedural programming?</strong>
 									</p>
@@ -909,7 +555,360 @@ There should be same return type.</p>
 								<p> Marker Interface doesn't contain any Data Members and Member Functions</p>
 <p><b>Can we create user define marker interface?</b></p>
 <p>Yes, We can write our own Marker Interface</p>
+						
+							<p><b>1. What is nested class?</b></p>
+	<p>A class within another class is called nested class.
+
+</p><p><b>2. Is there any difference between nested classes and inner classes?</b>
+<p>	A non-static class within another class is called Inner class. A static class within another class is called Nested class 
+
+</p><p><b>3. Can we access the non-final local variable, inside the local inner class?</b>
+<p>	No, local variable must be constant if we want to access it in local inner class. The local variable exist on the stack  only for the lifetime of the method.
+<p>Because the local variables are not guaranteed to exist as long as the method local ineer class object, the inner class object can't use them. Only final local variable can be used.
+
+</p><p><b>4. What is nested interface ?</b>
+	<p>An interface i.e. declared within another interface or class is known as nested interface. The nested interfaces are used to group related interfaces so that they can be easy to maintain.
+
+</p><p><b>5. Can a class have an interface?</b>
+<p>	Yes,we can write default implementation for interface methods.
+
+</p><p><b>6. Can an Interface have a class?</b>
+	<p>Yes, you can create both a nested class or an inner class inside a Java interface
+
+</p><p><b>7. What is multithreading?</b>
+<p>	Multithreading in java is a process of executing multiple threads simultaneously.
+	
+</p><p><b>8. What is thread?</b>
+	<p>It's an independent path of execution through program code. When multiple threads execute, one thread's path through the same code usually differs from the others.
+
+</p><p><b>9. What is the difference between preemptive scheduling and time slicing?</b>
+<p>Preemptive scheduling: The highest priority task executes until it enters the waiting or dead states or a higher priority task comes into existence.
+<p>Time slicing: A task executes for a predefined slice of time and then reenters the pool of ready tasks. The scheduler then determines which task should execute
+next, based on priority and other factors.
+
+</p><p><b>10. What does join() method?</b>
+	<p>join( ) method wait for a thread to finish .This method waits until the thread on which it is called terminates. Its name comes from the concept of the calling thread waiting until the specified thread joins it.
+
+</p><p><b>11. What is difference between wait() and sleep() method?</b>
+<p>	Wait() is an instance method that is used for thread synchronization. It can be called on any object, as it’s defined right on java.lang.Object, but it can only be called from a synchronized block
+Thread.sleep() is a static method that can be called from any context. Thread.sleep() pauses the current thread and does not release any locks.
+
+</p><p><b>12. Is it possible to start a thread twice?</b>
+	<p>No. After starting a thread, it can never be started again. If you does so, an IllegalThreadStateException is thrown. In such case, thread will run once but for second time, it will throw exception.	
+
+<p><b>13. Can we call the run() method instead of start()?</b>
+	<p>If you directly call run() method its body is executed in context of current thread. When you invoke start() method a new thread is created and run() method is executed in this new thread.	
+
+<p><b>14. What about the daemon threads?</b>
+	<p>Daemon thread in java is a service provider thread that provides services to the user thread. Its life depend on the mercy of user threads i.e. when all the user threads dies, JVM terminates this thread automatically.
+
+<p><b>15. Can we make the user thread as daemon thread if thread is started?</b>
+	<p>you can make a user thread to Daemon by using setDaemon() method of thread class. Your program will run on this thread, unless you create additional threads yourself.
+
+<p><b>16. What is shutdown hook?</b>
+	<p>The shutdown hook can be used to perform cleanup resource or save the state when JVM shuts down normally or abruptly. Performing clean resource means closing log file, sending some alerts or something else. So if you want to execute some code before JVM shuts down, use shutdown hook.
+
+<p><b>17. When should we interrupt a thread?</b>
+	<p>If any thread is in sleeping or waiting state (i.e. sleep() or wait() is invoked), calling the interrupt() method on the thread, breaks out the sleeping or waiting state throwing InterruptedException. If the thread is not in the sleeping or waiting state, calling the interrupt() method performs normal behaviour and doesn't interrupt the thread but sets the interrupt flag to true. Let's first see the methods provided by the Thread class for thread interruption.
+
+
+<p><b>18. What is synchronization?</b>
+	<p>Synchronization in java is the capability to control the access of multiple threads to any shared resource. Java Synchronization is better option where we want to allow only one thread to access the shared resource.
+
+<p><b>19. What is the purpose of Synchronized block?</b>
+	<p>Synchronized block can be used to perform synchronization on any specific resource of the method. Suppose you have 50 lines of code in your method, but you want to synchronize only 5 lines, you can use synchronized block. If you put all the codes of the method in the synchronized block, it will work same as the synchronized method.
+
+<p><b>20. Can Java object be locked down for exclusive use by a given thread?</b>
+<p>	Yes, it is locked
+
+<p><b>21. What is static synchronization?</b>
+<p>	If you make any static method as synchronized, the lock will be on the class not on object.
+
+<p><b>22. What is the difference between notify() and notifyAll()?</b>
 	
 
+<p><b>23. What is deadlock?</b>
+<p>	Deadlock describes a situation where two or more threads are blocked forever, waiting for each other. ... A Java multithreaded program may suffer from the deadlock condition because the synchronized keyword causes the executing thread to block while waiting for the lock, or monitor, associated with the specified object.
+
+
+<p><b>24. What is Garbage Collection?</b>
+<p>	In java, garbage means unreferenced objects. Garbage Collection is process of reclaiming the runtime unused memory automatically. In other words, it is a way to destroy the unused object
+
+<p><b>25. What is gc()?</b>
+	<p>The gc() method is used to invoke the garbage collector to perform cleanup processing. The gc() is found in System and Runtime classes.
+	
+
+<p><b>26. What is the purpose of finalize() method?</b>
+	<p>The Object class provides a callback method, finalize(), that may be invoked on an object when it becomes garbage.
+
+<p><b>27. Can an unrefrenced objects be refrenced again?</b>
+	<p>Yes it is possible we can get the reference of unreferenced objects by this keyword in finalize method. 
+
+<p><b>28. What kind of thread is the Garbage collector thread?</b>
+<p>	It is a Daemon Thread.	
+
+<p><b>29. What is difference between final, finally and finalize?</b>
+<p>	Final is used to apply restrictions on class, method and variable. Final class can't be inherited, final method can't be overridden and final variable value can't be changed.
+<p> Finally is used to place important code, it will be executed whether exception is handled or not. 
+<p>Finalize is used to perform clean up processing just before object is garbage collected.
+<p>Final is a keyword. Finally is a block. Finalize is a method.
+
+<p><b>30. What is the purpose of the Runtime class?</b>
+	<p>The purpose of the Runtime class is to provide access to the Java runtime system. The runtime information like memory availability, invoking the garbage collector, etc.
+
+<p><b>31. How will you invoke any external process in Java?</b>
+	<p>We can invoke the external process in Java using exec() method of Runtime Class 
+</p>
+<p><b>32.What is a deadlock?</b>
+<p><b>33. What is method overloading?</b>  <p>
+	Method overloading is nothing but the static binding. It have the same class name same method name but different parameters.
+
+<p><b>34. Why method overloading is not possible by changing the return type in java?</b>  <p>
+	In java, method overloading is not possible by changing the return type of the method because there may occur ambiguity.
+There should be same return type.
+
+<p><b>35. Can we overload main() method?</b>  <p>
+	Yes, by not using static we can overload main method. You can have any number of main methods in a class by method overloading. But JVM calls main() method which receives string array as arguments only.
+
+<p><b>36. What is &lsquo;this&rsquo; in java?</b>  <p>
+	this can be used to refer current class instance variable. this can be used to invoke current class method (implicitly). this() can be used to invoke current class constructor. this can be passed as an argument in the method call. this can be passed as argument in the constructor call. this can be used to return the current class instance from the method
+	
+<p><b>37. What is Inheritance?</b>  <p>
+	The process by which one class acquires the properties(data members) and functionalities(methods) of another class is called inheritance. The aim of inheritance is to provide the reusability of code so that a class has to write only the unique features and rest of the common properties and functionalities can be extended from the another class.
+	
+
+<p><b>38. Which class is the super class for every class?</b>  <p>
+	java.lang.Object class is the super class for all java classes
+	
+<p><b>39. Why multiple inheritance is not supported in java?</b>  <p>
+	 The problem with multiple inheritance is that two classes may define different ways of doing the same thing, and the subclass can't choose which one to pick. And arises ambiguty problem. Interfaces help in doing that. Because Interfaces specify only what the class is doing, not how it is doing it.
+
+<p><b>40. What is composition?</b>  <p>
+	Composition in java is the design technique to implement has-a relationship in classes. We can use java inheritance or Object composition in java for code reuse.
+
+09
+<p><b>41. Why Java does not support pointers?</b>  <p>
+	In order to make it more secure,it doesn't allow pointers directly(Manually). Pointers works internally in java.	
+
+<p><b>42. What is super in java?</b>  <p>
+	super can be used to refer immediate parent class instance variable. super can be used to invoke immediate parent class method. super() can be used to invoke immediate parent class constructor.	
+
+<p><b>43.Can you use this() and super() both in a constructor?</b>  <p>
+	Both this() and super() are constructor calls. Constructor call must always be the first statement. So we can not have two statements as first statement, hence either we can call super() or we can call this() from the constructor, but not both.
+
+<p><b>44. What is object cloning?</b>  <p>
+	The object cloning is a way to create exact copy of an object. For this purpose, clone() method of Object class is used to clone an object.
+	
+<p><b>45. What is method overriding?</b>  <p>
+	If subclass (child class) has the same method as declared in the parent class, it is known as method overriding in java. 
+	In other words, If subclass provides the specific implementation of the method that has been provided by one of its parent class, it is known as method overriding.
+
+<p><b>46. Can we override static method?</b>  <p>
+	No,Static methods can not be overridden because there is nothing to override, as they would be two different methods.
+
+<p><b>47. Why we cannot override static method?</b>  <p>
+	Static methods can not be overridden because there is nothing to override, as they would be two different methods.
+
+<p><b>48. Can we override the overloaded method?</b>  <p>
+	Its possible to overload main in Java but its not possible to override it, simply because its a static method. Execution of Java program has no impact on overloading main because JVM always call the original main method and if it doesn't found in class then it throws java.lang.NoSuchMethodError: main Exception in thread "main" error at runtime.
+
+
+<p><b>49. Difference between method Overloading and Overriding?</b>  <p>
+	Overloading happens at compile-time while Overriding happens at runtime. The binding of overloaded method call to its definition has happens at compile-time however binding of overridden method call to its definition happens at runtime.
+	The most basic difference is that overloading is being done in the same class while for overriding base and child classes are required. Overriding is all about giving a specific implementation to the inherited method of parent class.
+
+<p><b>50. Can you have virtual functions in Java?</b>  <p>
+	In Java, all non-static methods are by default "virtual functions." Only methods marked with the keyword final, which cannot be overridden, along with private methods, which are not inherited, are non-virtual
+
+<p><b>51. What is covariant return type?</b>  <p>
+	Covariant return, means that when one overrides a method, the return type of the overriding method is allowed to be a subtype of the overridden method's return type.
+<b>Example</b>
+<p>public class Animal {
+
+  <p>  protected Food seekFood() {
+
+    <p>    return new Food();
+  <p>  }
+<p>}
+</p>
+<p><b>52. What is final variable?</b>  <p>
+	Final is a constant keyword, which we can use with variables, methods and classes.
+	The final keyword can be applied with the variables, a final variable that have no value it is called blank final variable or uninitialized final variable. It can be initialized in the constructor only. The blank final variable can be static also which will be initialized in the static block only.
+
+<p><b>53. What is final method?</b>  <p>
+	If you make any method as final, you cannot override it.
+
+<p><b>54. What is final class?</b>  <p>
+	If you make any class as final, you cannot extend it.
+
+<p><b>55. Can you declare the main method as final?</b>  <p> 
+	Yes, main can be declared as final. Final means the method or variable cannot be modified in sub-class. It does not have any impact on main because Static function is not a part of object instance.
+
+<p><b>56. What is Polymorphism?</b>  <p>
+	Polymorphism in java is a concept by which we can perform a single action by different ways. Polymorphism is derived from 2 greek words: poly and morphs. The word "poly" means many and "morphs" means forms. So polymorphism means many forms.
+	There are two types of polymorphism in java: compile time polymorphism and runtime polymorphism. We can perform polymorphism in java by method overloading and method overriding.
+
+<p><b>57. How Polymorphism is achieved?</b>  <p>
+	compile time polymorphism and runtime polymorphism. We can perform polymorphism in java by method overloading and method overriding.
+
+<p><b>58. What is Runtime Polymorphism?</b>  <p>
+	Runtime polymorphism or Dynamic Method Dispatch is a process in which a call to an overridden method is resolved at runtime rather than compile-time.
+	In this process, an overridden method is called through the reference variable of a superclass. The determination of the method to be called is based on the object being referred to by the reference variable.
+
+<p><b>59. Can you achieve Runtime Polymorphism by data members?</b>  <p>
+	 Yes. When you declare data member on parent class then you don’t need to redefine it on child class data member’s value will get resolved to overridden value in actual object type just use or change its value based on your requirement.
+
+<p><b>60. What is static binding?</b>  <p>
+	Static binding is nothing but method overloading or function overloading. It have the same class name same method name but different parameters.
+
+<p><b>61. What is dynamic binding?</b>  <p>
+	Dynamic binding is nothing but mathod over riding or functional overridding. It have the same method name same parameters but different class names.
+
+<p><b>62. What is the difference between static binding and dynamic binding?</b>  <p>
+	When type of the object is determined at compiled time(by the compiler), it is known as static binding
+	When type of the object is determined at run-time, it is known as dynamic binding.
+
+<p><b>64. What is Abstraction?</b>  <p>
+	Abstraction is the process of abstraction in Java is used to hide certain details and only show the essential features of the object. In other words, it deals with the outside view of an object (interface). 
+
+<p><b>65. What is the difference between abstraction and encapsulation?</b>  <p>
+	Abstraction is implemented in Java using interface and abstract class while Encapsulation is implemented using private, package-private and protected access modifier. Design principles "programming for interface than implementation" is based on abstraction and "encapsulate whatever changes" is based upon Encapsulation.
+
+
+<p><b>66. What is abstract class?</b>  <p>
+	A class that is declared as abstract is known as abstract class. It needs to be extended and its method implemented. It cannot be instantiated.
+	
+<p><b>67. Can there be any abstract method without abstract class?</b>  <p>
+	No we can not use abstract methods with out abstract class.If u define one method as absract automatically the class having that method become abstract.
+
+<p><b>68. Can you use abstract and final both with a method?</b>  <p>
+	No, Abstract method cannot be declared as final. This is because, abstract method has to be overridden to provide implementation. If it is declared as final, it cannot be overridden.
+
+<p><b>69. Is it possible to instantiate the abstract class?</b>  <p>
+	No, Because an abstract class is an incomplete class (incomplete in the sense it contains abstract methods without body and output) we cannot create an instance or object.
+
+<p><b>70.What is interface?</b>  <p>
+	An interface in java is a blueprint of a class. It has static constants and abstract methods.
+The interface in java is a mechanism to achieve abstraction. There can be only abstract methods in the java interface not method body. It is used to achieve abstraction and multiple inheritance in Java.
+Java Interface also represents IS-A relationship.
+	
+<p><b>71. Can you declare an interface method static?</b>  <p>
+<p>Yes, In Java 8, interfaces can contain implemented methods, static methods, and the so-called "default" methods.</p>
+
+<p><b>72. Can an Interface be final?</b>  <p>
+	No. We can not instantiate interfaces, so in order to make interfaces useful we must create subclasses. The final keyword makes a class unable
+to be extended.
+
+<p><b>73. What is marker interface?</b>  <p>
+	Marker interface in Java is interfaces with no field or methods or in simple word empty interface in java is called marker interface. 
+
+<p><b>74. What is difference between abstract class and interface?</b>  <p> 
+	Abstract class can have constructor, where you need an object to call the methods in subclass. But in case of default method without any reference you can invoke the interface method, like InterfaceName.super.method()
+
+
+<p><b>75. Can we define private and protected modifiers for variables in interfaces?</b>  <p>
+	When you Declare interface The java compiler adds public and abstract keywords before the interface method and public, static and final keywords before data members automatically 
+public interface Test{
+   public string name1;
+   private String email;
+   protected pass;
+}
+as you have declare variable in test interface with private and protected it will give error. if you do not specify the modifier the compiler will add public static final automatically.
+
+</p>
+<p><b>76. When can an object reference be cast to an interface reference?</b>  
+<p>
+	An object reference be cast to an interface reference when the object implements thereferenced interface.
+
+</p><p><b>77. What is package?</b>  <p>
+	A package is a grouping of related types providing access protection and name space management.
+
+</p>
+<p><b>78. Do I need to import java.lang package any time? Why ?</b>  <p>
+	No because the Java compiler automatically imports the "java.lang.*" package 
+
+</p><p><b>79. Can I import same package/class twice? Will the JVM load the package twice at runtime?</b>  <p>
+	One can import the same package or same class multiple times. Neither compiler nor JVM complains abt it. And the JVM will internally load the class only once no matter how many times you import the same class.
+
+</p><p><b>80. What is static import ?</b>  <p>
+	The static import feature of Java 5 facilitate the java programmer to access any static member of a class directly. There is no need to qualify it by the class name.
+
+</p><p><b>81. How to create a package?</b>  <p>
+	To create a package, you choose a name for the package (naming conventions are discussed in the next section) and put a package statement with that name at the top of every source file that contains the types (classes, interfaces, enumerations, and annotation types) that you want to include in the package.
+	The package statement (for example, package graphics;) must be the first line in the source file. There can be only one package statement in each source file, and it applies to all types in the file.
+
+</p><p><b>82. What is Exception Handling?</b>  <p>
+	Exception Handling is a mechanism to handle runtime errors such as ClassNotFound, IO, SQL, Remote etc.
+
+</p><p><b>83. What is difference between Checked Exception and Unchecked Exception?</b>  <p>
+	The exceptions that are checked at compile time. If some code within a method throws a checked exception, then the method must either handle the exception or it must specify the exception using throws keyword.
+	The exceptions that are not checked at compiled time. In C++, all exceptions are unchecked, so it is not forced by the compiler to either handle or specify the exception. It is up to the programmers to be civilized, and specify or catch the exceptions.
+
+</p><p><b>84. What is the base class for Error and Exception?</b>  <p>
+	Throwable is the base class for the classes Error and Exception.
+
+</p><p><b>85. Is it necessary that each try block must be followed by a catch block?</b>  <p>
+	It is not necessary that each try block must be followed by a catch block. It should be followed by either a catch block OR a finally block. And whatever exceptions are likely to be thrown should be declared in the throws clause of the method
+
+</p><p><b>86. What is finally block?</b>  <p>
+	Java finally block is a block that is used to execute important code such as closing connection, stream etc. Java finally block is always executed whether exception is handled or not. Java finally block follows try or catch block.
+
+</p><p><b>87. Can finally block be used without catch?</b>  <p>
+	YES, It possible to have try without catch or finally.
+
+</p><p><b>88. Is there any case when finally will not be executed?</b>  <p>
+	If the thread executing the try or catch code is interrupted or killed, the finally block may not execute even though the application as a whole continues.
+
+</p><p><b>89. What is difference between throw and throws?</b>  <p>
+	Java throw keyword is used to explicitly throw an exception. Java throws keyword is used to declare an exception. Checked exception cannot be propagated using throw only. Checked exception can be propagated with throws.
+
+</p><p><b>90. Can an exception be re thrown?</b>  <p>
+	exceptions occurred in the try block are caught in catch block. Thus caught exceptions can be re-thrown using throw keyword. Re-thrown exception must be handled some where in the program, otherwise program will terminate abruptly.	
+
+</p><p><b>91. Can subclass overriding method declare an exception if parent class method doesn't throw an exception ?</b>  <p>
+	Yes but only unchecked exception not checked.	
+
+</p><p><b>92. What is exception propagation?</b>  <p>
+	An exception is first thrown from the top of the stack and if it is not caught, it drops down the call stack to the previous method,If not caught there, the exception again drops down to the previous method, and so on until they are caught or until they reach the very bottom of the call stack.This is called exception propagation.
+
+</p><p><b>93. What is the meaning of immutable in terms of String?</b>  <p>
+	In java, string objects are immutable. Immutable simply means unmodifiable or unchangeable. Once string object is created its data or state can't be changed but a new string object is created.
+	
+</p><p><b>94. Why string objects are immutable in java?</b>  <p>
+	There are multiple reasons that String is designed to be immutable in Java. A good answer depends on good understanding of memory, synchronization, data structures, etc.
+
+</p><p><b>95. How many ways we can create the string object?</b>  <p>
+	There are two ways to create String object:
+
+		1)By string literal
+		String s="welcome"; 
+
+		2)By new keyword
+		String s=new String("Welcome")
+	
+
+</p><p><b>96. How many objects will be created in the following code?</b>  <p>
+String s1="Welcome";  
+String s2="Welcome";  
+String s3="Welcome";  
+	Only one String object is created which is referred by three references 
+
+</p><p><b>97. Why java uses the concept of string literal?</b>  <p>
+	Each time you create a string literal, the JVM checks the string constant pool first. If the string already exists in the pool, a reference to the pooled instance is returned. If string doesn't exist in the pool, a new string instance is created and placed in the pool.
+
+</p><p><b>98. How many objects will be created in the following code?</b> 
+<p>String s = new String("Welcome");  	
+	<p>Two objects, one in string constant pool and other in non-pool(heap)
+	
+</p><p><b>99. What is the basic difference between String and StringBuffer object?</b>
+	<p>String class is immutable. String is slow and consumes more memory when you concat too many strings because every time it creates new instance. String class overrides the equals() method of Object class. So you can compare the contents of two strings by equals() method.
+	<p>StringBuffer class is mutable. StringBuffer is fast and consumes less memory when you cancat strings. StringBuffer class doesn't override the equals() method of Object class.
+	
+</p><p><b>100. What is the difference between StringBuffer and StringBuilder?</b>
+	<p>StringBuffer is synchronized i.e. thread safe. It means two threads can't call the methods of StringBuffer simultaneously. StringBuilder is non-synchronized i.e. not thread safe. It means two threads can call the methods of StringBuilder simultaneously. StringBuffer is less efficient than StringBuilder. StringBuilder is more efficient than StringBuffer.
+
+
+</p><p><b>101. What is the purpose of toString() method in java ?</b>
+	<p>By overriding the toString() method of the Object class, we can return values of the object, so we don't need to write much code.
 </article>
 <%@include file="footer.jsp"%>

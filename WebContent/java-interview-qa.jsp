@@ -1,4 +1,5 @@
-<%@include file="java-header.jsp"%>
+ <%@include file="java-header.jsp"%>
+ <%@include file="java-interview-leftbar.jsp" %> 
 <article>
 <p>
 										<h1>Java Interview</h1>
