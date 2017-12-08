@@ -310,7 +310,7 @@ var acpJcarousel = {"wrapType":"circular"};
 	data-pso-th="3d4f4110fd5ef0b0c959397e0c2f7659">
 </head>
 
-<script type="text/JavaScript">
+<!-- <script type="text/JavaScript">
 function killCopy(e){
 return false
 }
@@ -322,7 +322,7 @@ if (window.sidebar){
 document.onmousedown=killCopy
 document.onclick=reEnable
 }
-</script>
+</script> -->
 <body class="home blog site-layout-fluid global-layout-right-sidebar">
 
 	<div id="page" class="container hfeed site">
