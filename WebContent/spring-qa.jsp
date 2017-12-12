@@ -1,6 +1,6 @@
 <%@include file="java-header.jsp"%>
 
-<%@include file="servlets-leftbar.jsp"%>
+<%@include file="spring-leftbar.jsp"%>
 	<article>
 	<div id="textbox">
   <p class="alignleft"><a href="#" class="previous">&laquo; Previous</a></p>

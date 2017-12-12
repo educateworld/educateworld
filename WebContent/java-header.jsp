@@ -366,6 +366,39 @@ document.onclick=reEnable
 							Base</a></li>
 					<li class="page_item page-item-15"><a href="data-science.jsp">Data
 							Science</a></li>
+							
+							<li id="menu-item-21"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a
+								href="net.jsp">.Net</a></li>
+							<li id="menu-item-20"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a
+								href="data-science.jsp">Data Science</a></li>
+							<li id="menu-item-19"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a
+								href="data-base.jsp">Data Base</a>
+								</li>
+										<li id="menu-item-19"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a
+								href="cloud-computing.jsp">Cloud</a></li>
+							<li id="menu-item-19"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a
+								href="angularjs.jsp">Angular Js</a></li>
+								<li id="menu-item-19"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a
+								href="agile-methodology.jsp">Agile</a></li>
+								<li id="menu-item-19"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a
+								href="#">Web Services</a>
+								</li>
+								<li id="menu-item-19"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a
+								href="businessobjects.jsp">Business Objects</a></li>
+								<li id="menu-item-19"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a
+								href="java-interview-qa.jsp">Other InterView Questions</a></li>
+							<li id="menu-item-19"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a
+								href="online.jsp">Online Training</a></li>
 				</ul>
 			</div>
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <%@include file="java-header.jsp"%>
-
+<%@include file="spring-leftbar.jsp"%>
 <article>
 <h1>Spring Questions</h1>
 <p><b>1.What is Spring Framework?</b></p>
