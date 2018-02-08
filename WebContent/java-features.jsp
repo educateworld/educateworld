@@ -91,7 +91,7 @@
 										C and CPP. These functions are known as native methods. Native
 										methods are linked dynamically at runtime.
 										
-										<p> <b>Portable:</b>  </p>
+										<p> <b>Java is Portable:</b>  </p>
 										In java we discussed about platform independent. Platform Independent byte code can be carried to any platform for execution. That is we can write java code on one machine that executes on another machine. This feature makes java code portable.
 <br>							
 
