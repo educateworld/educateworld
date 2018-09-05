@@ -43,6 +43,12 @@
 			using logical structures ensure that the flow of control is clear and
 			readable.
 		<p>
+		<b>Types of Java Applications</b>
+		<p><b>1.Web Application:</b> We can create server-side web applications by using java programming language. At present In java we are using Servlet, JSP, Struts, JSF etc. technologies to create Web Application.
+<p><b>2.Standalone Application:</b> We can call it as desktop application or window-based application. We need to install an application on each and every machine or server such as media player, antivirus etc. At present In java we are using AWT and Swing for creating standalone applications.
+	<p><b>3.Enterprise Application:</b> Enterprise application is distributed in nature. Example is banking applications etc. Enterprise has advantages those are high-level security, load balancing, and clustering. In Java we use EJB for creating enterprise applications.
+		<p><b>4.Mobile Application:</b> For mobile devices Java is used to create application software. At present, For smaller devices Java ME (Java Mobile Edition) is used for creating applications. And one main thing is Java is a programming language for Google Android application development.
+		
 			</p>
 			<p>
 										

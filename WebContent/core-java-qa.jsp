@@ -1,5 +1,5 @@
 <%@include file="java-header.jsp"%>
-<%@include file="java-interview-leftbar.jsp"%>
+
 					<article>
 						<p>	<h1 class="entry-title">Core Java Interview Questions</h1>
 						

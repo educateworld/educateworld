@@ -1112,8 +1112,6 @@ ol.comment-list li {
     border-radius: 2px;
 }
 
-
-
 a.comment-reply-link:hover {
     background-color: #ffab1f;
     color:#fff;
@@ -3470,47 +3468,4 @@ input[type="url"] {
 		padding: 10px 10px 10px 15px;
 	}
 
-
-
-a {
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px 16px;
 }
-
-a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.previous {
-    background-color: #f1f1f1;
-    color: black;
-}
-
-.next {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.round {
-    border-radius: 50%;
-}
-
-.alignleft {
-	float: left;
-}
-.alignright {
-	float: right;
-}
-<title>Style Test</title>
-<style type="text/css">
-.one { font-style: italic; }
-</style>
-
-}
-
-
-
-
-
