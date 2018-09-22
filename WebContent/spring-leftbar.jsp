@@ -7,5 +7,6 @@
 	<a href="spring-aop.jsp">Spring AOP</a><br>
 	<a href="spring-dao.jsp">Spring DAO</a><br>
 	<a href="spring-hibernate-integration.jsp">Hibernate Integration</a><br>
+	<a href="spring-boot.jsp">Spring Boot</a><br>
 	<a href="spring-qa.jsp">Spring Interview</a>
 	</nav>

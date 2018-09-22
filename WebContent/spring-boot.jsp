@@ -3,17 +3,14 @@
 <%@include file="java-header.jsp"%>
 <%@include file="spring-leftbar.jsp"%>
 <article>
-	<h1>Spring Framework</h1>
-	<P> Spring is one of the most widely used Open Source, Light Weight Java EE Frame Work.</p>
-	<p> Spring 5.0 requires JDK 8+ and supports out of the box support to JDK 9.</p>
-	<p><b>Advamtages of Spring Framework Are :</b></p>
-	<p>Dependency Injection</p>
-	<p>Aspect Orented Programming</p>
+	<h1>Spring with ORM Frameworks</h1>
 	<p>Spring provides API to easily integrate Spring with ORM
 		frameworks such as Hibernate, JPA(Java Persistence API), JDO(Java Data
 		Objects), Oracle Toplink and iBATIS.</p>
-		<p>
-	<b> Advantages of ORM Frameworks with Spring:</b>
+	<p>Advantages of ORM Frameworks with Spring There are a lot of
+		advantages
+	<p>
+		<b>There are as follows:</b>
 	</p>
 	<p>
 		<b>Less coding is required:</b> By the help of Spring framework, you
